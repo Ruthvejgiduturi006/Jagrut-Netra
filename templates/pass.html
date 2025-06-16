@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+</head>
+<body>
+    <h1>Search Results for {{ p }}</h1>
+    <h2>Flipkart Results:</h2>
+    <ul>
+        {% for item in li %}
+            <li>
+                <img src="{{ item[1] }}" alt="{{ item[2] }}" width="100">
+                <a href="{{ item[0] }}">{{ item[2] }}</a> - {{ item[3] }}
+            </li>
+        {% endfor %}
+    </ul>
+    <h2>Amazon Results:</h2>
+    <ul>
+        {% for item in li_amaz %}
+            <li>
+                <img src="{{ item[1] }}" alt="{{ item[2] }}" width="100">
+                <a href="{{ item[0] }}">{{ item[2] }}</a> - {{ item[3] }}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Monitoring System</title>
+</head>
+<body>
+
+    <h2>Crowd Management</h2>
+    <input type="file" id="crowdUpload" accept="image/*">
+    <button onclick="detectCrowd()">Detect Crowd</button>
+    <p id="crowdResult"></p>
+
+    <h2>Missing Persons</h2>
+    <input type="file" id="missingUpload" accept="image/*">
+    <button onclick="uploadMissingPerson()">Upload</button>
+
+    <h2>Restricted Area Security</h2>
+    <button onclick="checkRestrictedArea()">Check Restricted Area</button>
+    <p id="restrictedResult"></p>
+
+    <h2>Nighttime Security</h2>
+    <button onclick="monitorNightSecurity()">Monitor Nighttime</button>
+    <p id="nightResult"></p>
+
+    <script>
+        function detectCrowd() {
+            let fileInput = document.getElementById("crowdUpload");
+            let file = fileInput.files[0];
+            let formData = new FormData();
+            formData.append("image", file);
+
+            fetch("/detect_crowd", { method: "POST", body: formData })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("crowdResult").innerText = `Faces Detected: ${data.faces_detected}`;
+            });
+        }
+
+        function uploadMissingPerson() {
+            let fileInput = document.getElementById("missingUpload");
+            let file = fileInput.files[0];
+            let formData = new FormData();
+            formData.append("image", file);
+
+            fetch("/upload_missing", { method: "POST", body: formData });
+        }
+    </script>
+
+</body>
+</html>
