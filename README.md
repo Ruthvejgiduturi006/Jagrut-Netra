@@ -1,5 +1,7 @@
 🛡️ Jagrut Netra
 
+<img width="1913" height="864" alt="Screenshot 2025-04-12 104142" src="https://github.com/user-attachments/assets/90e4f3b3-3604-4072-9406-12546475820d" />
+
 Jagrut Netra( जागृत नेत्र ) is an AI-powered **Smart Surveillance System** built with **OpenCV + Streamlit**.  
 It provides real-time monitoring and detection for various security and safety scenarios such as **crowd management, fire & smoke detection, restricted area monitoring, night security, and loitering detection**.
 
