@@ -14,7 +14,7 @@ It provides real-time monitoring and detection for various security and safety s
 - 🌙 **Night Time Security** → Provides monitoring in low-light/night conditions.  
 - 🕒 **Loitering Detection** → Detects suspicious lingering movements.  
 - 💾 **Recording Support** → Saves surveillance footage automatically.  
-- 🎨 **Streamlit UI** → Modern, responsive web interface with custom styling.  
+- 🎨 **Streamlit UI** → Modern and responsive web interface with custom styling.  
 
 ---
 
